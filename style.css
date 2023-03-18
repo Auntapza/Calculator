@@ -1,0 +1,163 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.calculator {
+	margin: 50px auto;
+	width: 280px;
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+	background-color: #fff;
+	border-radius: 10px 10px 0 0;
+	box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	text-align: right;
+}
+
+.display input {
+	margin: 0;
+	font-size: 32px;
+  width: 100%;
+  outline: 0;
+  border: none;
+  text-align: end;
+}
+
+.buttons {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	gap: 5px;
+	padding: 10px;
+}
+
+button {
+	background-color: #fff;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	color: #333;
+	font-size: 24px;
+	padding: 10px;
+	transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
+}
+
+button:active {
+	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+	transform: translateY(2px);
+}
+
+button:focus {
+	outline: none;
+}
+
+#clear {
+	grid-area: 1 / 1 / 1 / 3;
+	background-color: #e74c3c;
+	color: #fff;
+}
+
+#backspace {
+	grid-area: 1 / 3 / 1 / 4;
+	background-color: #f1c40f;
+	color: #fff;
+}
+
+#percent {
+	grid-area: 1 / 4 / 1 / 5;
+	background-color: #f1c40f;
+	color: #fff;
+}
+
+#divide {
+	grid-area: 2 / 4 / 2 / 5;
+	background-color: #f1c40f;
+	color: #fff;
+}
+
+#multiply {
+	grid-area: 3 / 4 / 3 / 5;
+	background-color: #f1c40f;
+	color: #fff;
+}
+
+#subtract {
+	grid-area: 4 / 4 / 4 / 5;
+	background-color: #f1c40f;
+	color: #fff;
+}
+
+#plus {
+	grid-area: 5 / 4 / 5 / 5;
+	background-color: #f1c40f;
+	color: #fff;
+}
+
+#negate {
+	grid-area: 5 / 1 / 5 / 2;
+}
+
+#zero {
+	grid-area: 5 / 1 / 5 / 3;
+}
+
+#decimal {
+	grid-area: 5 / 3 / 5 / 4;
+}
+
+#equals {
+	grid-area: 6 / 1 / 6 / 5;
+	background-color: #2ecc71;
+	color: #fff;
+  /* width: 100%; */
+}
+
+button.operator:active {
+	transform: translateY(2px);
+}
+
+button.operator:focus {
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+	.calculator {
+		width: 100%;
+	}
+	
+	.display p {
+		font-size: 24px;
+	}
+	
+	button {
+		font-size: 20px;
+		padding: 5px;
+	}
+}
+
+@media (max-width: 320px) {
+	.display p {
+		font-size: 20px;
+	}
+	
+	button {
+		font-size: 16px;
+		padding: 3px;
+	}
+}
